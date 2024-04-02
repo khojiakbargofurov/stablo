@@ -11,12 +11,13 @@
             <Link href="/">Home</Link>
             <Link href="/about">About</Link>
             <Link href="/contact">Contact</Link>
-            <Image
-            src="image.svg"
+            <Link href="/"><Image
+            src="./image.svg"
             width={100}
             height={100}
             alt="logo brend"
-            />
+            /></Link>
+           
             <Link href="/archive">Archive</Link>
             <Link href="/pro">Pro Version</Link>
             <Link href="/download">Download</Link>
@@ -24,7 +25,7 @@
         </header>
 
         <main className="max-w-screen-xl flex flex-wrap  mx-auto p-2">
-          
+            
         </main>
       </>
     );

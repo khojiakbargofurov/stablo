@@ -23,7 +23,7 @@ export default async function Home() {
 
   return (
     <>
-      <header className="Container mx-auto">
+      <header className="Container mx-auto max-w-screen-xl flex flex-col flex-wrap items-center justify-center">
         <nav className="flex max-w-screen-xl flex flex-wrap items-center justify-center gap-8 mx-auto p-2 my-6">
           <Link href="/">Home</Link>
           <Link href="/about">About</Link>
@@ -35,20 +35,20 @@ export default async function Home() {
           <Link href="/archive">Archive</Link>
           <Link href="/pro">Pro Version</Link>
           <Link href="/download">Download</Link>
-          <Select >
+        </nav>
+          <Select className="max-w-screen-xl mx-auto p-2 my-6">
             <SelectTrigger className="w-[180px]">
               <SelectValue placeholder="Categories" />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectItem value="electronics">Electronics</SelectItem>
+                <SelectItem value="wlectronics">Electronics</SelectItem>
                 <SelectItem value="jewelry">Jewelery</SelectItem>
                 <SelectItem value="men's clothing">Men's clothing</SelectItem>
                 <SelectItem value="women's clothing">Women's clothing</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>
-        </nav>
       </header>
 
       <main className="max-w-screen-xl flex flex-wrap mx-auto p-2  justify-center">

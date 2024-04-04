@@ -14,7 +14,7 @@ export default async function Details({ params }) {
         <h1 className="text-2xl font-bold mb-4">Product Details</h1>
         {product && (
           <div className="max-w-md mx-auto bg-white rounded-xl overflow-hidden shadow-md">
-            <div className="md:flex items-center">
+            <div className="flex items-center justify-center px-4">
               <div className="md:flex-shrink-0">
                 <img
                   className="flex w-full items-center md:w-48"

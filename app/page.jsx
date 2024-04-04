@@ -31,9 +31,9 @@ export default async function Home() {
         <div className="flex max-w-screen-xl flex flex-wrap justify-center gap-8 mx-auto ">
           {data.slice(0, 2).map((product) => (
             <div key={product.id} className="w-full md:w-1/2 lg:w-1/2 xl:w-1/3 p-4">
-                <Link href="/id">
+                <Link href={`${product.id}`}>
                 <div className="border border-gray-200 rounded-lg p-4">
-                  <Image src={product.image} width={500} height={300} alt={product.title} />
+                  <Image src={product.image} width={300} height={200} alt={product.title} />
                   <h2 className="text-lg font-semibold mt-2">{product.title}</h2>
                   <p className="text-gray-600">{product.description.slice(0,100)}...</p>
                   <p className="text-gray-800 font-bold mt-2">${product.price}</p>
@@ -44,12 +44,14 @@ export default async function Home() {
         </div>
         {data.slice(2, 50).map((product) => (
             <div key={product.id} className="w-full md:w-1/2 lg:w-1/3 xl:w-1/3 p-4">
-              <div className="border border-gray-200 rounded-lg p-4">
-                <Image src={product.image} width={500} height={300} alt={product.title} />
-                <h2 className="text-lg font-semibold mt-2">{product.title}</h2>
-                <p className="text-gray-600">{product.description.slice(0,100)}...</p>
-                <p className="text-gray-800 font-bold mt-2">${product.price}</p>
-              </div>
+              <Link href={`${product.id}`}>
+                <div className="border border-gray-200 rounded-lg p-4">
+                  <Image src={product.image} width={300} height={200} alt={product.title} />
+                  <h2 className="text-lg font-semibold mt-2">{product.title}</h2>
+                  <p className="text-gray-600">{product.description.slice(0,100)}...</p>
+                  <p className="text-gray-800 font-bold mt-2">${product.price}</p>
+                </div>
+              </Link>
             </div>
           ))}
       </main>

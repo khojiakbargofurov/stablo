@@ -1,5 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 async function getData() {
   const res = await fetch('https://fakestoreapi.com/products');
@@ -11,6 +20,7 @@ async function getData() {
 
 export default async function Home() {
   const data = await getData();
+
   return (
     <>
       <header className="Container mx-auto">
@@ -25,6 +35,19 @@ export default async function Home() {
           <Link href="/archive">Archive</Link>
           <Link href="/pro">Pro Version</Link>
           <Link href="/download">Download</Link>
+          <Select >
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="Categories" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectGroup>
+                <SelectItem value="electronics">Electronics</SelectItem>
+                <SelectItem value="jewelry">Jewelery</SelectItem>
+                <SelectItem value="men's clothing">Men's clothing</SelectItem>
+                <SelectItem value="women's clothing">Women's clothing</SelectItem>
+              </SelectGroup>
+            </SelectContent>
+          </Select>
         </nav>
       </header>
 
